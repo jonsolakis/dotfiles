@@ -12,10 +12,14 @@ export PATH=/usr/local/bin:$PATH
 plugins=(git composer macos)
 
 source $ZSH/oh-my-zsh.sh
-source "$HOME/.config/zsh/exports.zsh"
-source "$HOME/.config/zsh/aliases.zsh"
-source "$HOME/.config/zsh/functions.zsh"
-source "$HOME/.config/zsh/work_exports.zsh"
+
+for file in .config/zsh/*; do
+    source "$file"
+done
+
+for file in .config/zsh/work/*; do
+    source "$file"
+done
 
 
 
