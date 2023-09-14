@@ -22,9 +22,6 @@ export LESS_TERMCAP_md="$ORANGE"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
-# Always enable colored `grep` output
-export GREP_OPTIONS="--color=auto"
-
 #Set AWS Profile for tokendito
 export AWS_PROFILE='C51_AWS_PROD_ReadOnly'
 

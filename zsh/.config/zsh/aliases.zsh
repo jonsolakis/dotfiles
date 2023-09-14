@@ -31,5 +31,8 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Always enable colored `grep` output
+alias grep="grep --color=auto"
+
 # Restart touch bar
 alias touchbar="killall ControlStrip"
