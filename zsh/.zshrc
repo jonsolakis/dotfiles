@@ -13,7 +13,7 @@ plugins=(git composer macos)
 
 source $ZSH/oh-my-zsh.sh
 
-for file in $(find .config/zsh/* -type f -print); do
+for file in $(find ~/.config/zsh/* -type f -print); do
     source "$file"
 done
 
