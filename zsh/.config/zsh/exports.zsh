@@ -24,6 +24,3 @@ export MANPAGER="less -X"
 
 #Set AWS Profile for tokendito
 export AWS_PROFILE='C51_AWS_PROD_ReadOnly'
-
-#Used for Xdebug
-export MY_IP=$(ipconfig getifaddr en0)
