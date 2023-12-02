@@ -9,7 +9,12 @@ export COMPOSER_PROCESS_TIMEOUT=600
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
 
-plugins=(git composer macos)
+plugins=(
+    git
+    composer
+    macos
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
