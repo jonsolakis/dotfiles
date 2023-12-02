@@ -14,6 +14,7 @@ plugins=(
     composer
     macos
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -21,6 +22,11 @@ source $ZSH/oh-my-zsh.sh
 for file in $(find ~/.config/zsh/* -type f -print); do
     source "$file"
 done
+
+# set PATH so it includes user's private ~/.local/bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 
 
