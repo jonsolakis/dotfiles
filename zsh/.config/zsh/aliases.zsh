@@ -1,21 +1,21 @@
 alias zshrc="vim ~/.zshrc"
 alias sshrc="vim ~/.ssh/config"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias token="tokendito"
 
 #Git
 alias nah="git add . && git reset --hard"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias amend="git add . && git commit --amend --no-edit && git push origin -f"
 
 # List all files colorized in long format
 alias l="ls -laF"
 
-# PhpStorm
-alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
-
 # PHP
-alias switch-php80="brew unlink php@7.4 && brew link --overwrite --force php"
 alias switch-php74="brew unlink php && brew link --overwrite --force php@7.4"
+alias switch-php80="brew unlink php && brew link --overwrite --force php@8.0"
+alias switch-php81="brew unlink php && brew link --overwrite --force php@8.1"
+alias switch-php82="brew unlink php && brew link --overwrite --force php@8.2"
+alias switch-php83="brew unlink php && brew link --overwrite --force php@8.3"
 
 # IP addresses
 alias ip="curl https://diagnostic.opendns.com/myip ; echo"
@@ -33,6 +33,3 @@ alias sudo='sudo '
 
 # Always enable colored `grep` output
 alias grep="grep --color=auto"
-
-# Restart touch bar
-alias touchbar="killall ControlStrip"

@@ -1,6 +1,3 @@
-# Make vim the default editor
-export EDITOR="vim"
-
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
@@ -27,3 +24,8 @@ export AWS_PROFILE='C51_AWS_PROD_ReadOnly'
 
 #ZSH autcomplete
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
+
+#use Neovim for editor
+export GIT_EDITOR=nvim
+export VISUAL=nvim
+export EDITOR="$VISUAL"
