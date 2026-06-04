@@ -1,0 +1,63 @@
+[user]
+    name = Jon Solakis
+    email = jonsolakis@gmail.com
+
+[core]
+    editor = nvim
+
+[push]
+    autoSetupRemote = true
+    default = simple
+    followTags = true
+[init]
+    defaultBranch = main
+
+[column]
+    ui = auto
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+[help]
+    autocorrect = prompt
+
+[alias]
+    branches = branch -a
+    c = commit --verbose
+    ca = commit --all --verbose
+    contributors = shortlog --summary --numbered
+    d = !git --no-pager diff --patch-with-stat
+    dm = !git branch --merged | grep -v '\\*\\|master\\|main\\|development' | sed 's/^[[:space:]]*//g' | xargs -r git branch -d
+    fc = !f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f
+    graph = log --graph --decorate --pretty=format:'%C(blue)%d%Creset %C(yellow)%h%Creset %s, %C(bold green)%an%Creset, %C(green)%cd%Creset' --date=relative --all
+    l = log --graph --decorate --pretty=format:'%C(blue)%d%Creset %C(yellow)%h%Creset %s, %C(bold green)%an%Creset, %C(green)%cd%Creset' --date=relative -n 20
+    lg = !f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f
+    now = commit --amend --date=now
+    remotes = remote -v
+    s = status -s
+    tags = tag -l
+    amend = commit --all --amend --no-edit
+    fp = push origin --force
+    alias = "! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | grep -v ^'alias '"
+
+
+[pull]
+	rebase = true
+[pager]
+    diff = diffnav
+
+[includeIf "gitdir:~/qm/"]
+    path = ~/.qm.gitconfig

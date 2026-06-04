@@ -33,3 +33,10 @@ alias sudo='sudo '
 
 # Always enable colored `grep` output
 alias grep="grep --color=auto"
+
+alias tf="terraform"
+
+#Docker 
+alias dps="docker ps --format \"table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}\""
+alias dozzle="docker run -d -v /var/run/docker.sock:/var/run/docker.sock -p 9000:8080 amir20/dozzle:latest"
+alias dc="docker compose"

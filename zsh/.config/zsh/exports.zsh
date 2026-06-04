@@ -19,9 +19,6 @@ export LESS_TERMCAP_md="$ORANGE"
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
 
-#Set AWS Profile for tokendito
-export AWS_PROFILE='C51_AWS_PROD_ReadOnly'
-
 #ZSH autcomplete
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8"
 
