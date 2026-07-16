@@ -26,6 +26,15 @@ require("lazy").setup({
 }, lazy_config)
 
 -- load theme
+local base46_theme = require("nvconfig").base46.theme
+local base46_theme_cache = vim.g.base46_cache .. "theme"
+local cached_base46_theme = vim.fn.filereadable(base46_theme_cache) == 1 and vim.fn.readfile(base46_theme_cache)[1]
+
+if cached_base46_theme ~= base46_theme or vim.fn.filereadable(vim.g.base46_cache .. "defaults") == 0 then
+  require("base46").compile()
+  vim.fn.writefile({ base46_theme }, base46_theme_cache)
+end
+
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 

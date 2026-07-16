@@ -4,6 +4,8 @@
 
 [core]
     editor = nvim
+    hooksPath = /Users/jon/qm/gh/scripts/git/hooks
+    whitespace = blank-at-eol,blank-at-eof,space-before-tab
 
 [push]
     autoSetupRemote = true
@@ -26,6 +28,7 @@
     colorMoved = plain
     mnemonicPrefix = true
     renames = true
+    wsErrorHighlight = all
 
 [fetch]
     prune = true
@@ -58,6 +61,19 @@
 	rebase = true
 [pager]
     diff = diffnav
+
+[delta]
+    light = true
+    true-color = always
+    syntax-theme = Catppuccin Latte
+    zero-style = syntax
+    minus-style = syntax "#f2cdcd"
+    minus-emph-style = syntax "#eebebe"
+    plus-style = syntax "#d6ecd0"
+    plus-emph-style = syntax "#c4e7bd"
+    file-style = bold "#1e66f5"
+    hunk-header-style = syntax "#e6e9ef"
+    whitespace-error-style = "#d20f39" "#f2cdcd" reverse
 
 [includeIf "gitdir:~/qm/"]
     path = ~/.qm.gitconfig

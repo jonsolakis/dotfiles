@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="muse"
+ZSH_THEME=""
 
 # Hide username in prompt
 DEFAULT_USER=`whoami`
@@ -23,6 +23,13 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+setopt prompt_subst
+ZSH_THEME_GIT_PROMPT_PREFIX="%F{#7287fd}("
+ZSH_THEME_GIT_PROMPT_SUFFIX=")%f"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %F{#d20f39}*%f"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %F{#40a02b}+%f"
+PROMPT='%F{#1e66f5}%~%f $(git_prompt_info)%F{#40a02b}>%f '
+
 for file in \
   "$HOME/.config/zsh/exports.zsh" \
   "$HOME/.config/zsh/functions.zsh" \
@@ -35,10 +42,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-export TERM=xterm-256color
 export HOMEBREW_NO_AUTO_UPDATE=true
 
-export SOBOLE_THEME_MODE=dark
+export SOBOLE_THEME_MODE=light
 # pnpm
 export PNPM_HOME="/Users/jon/Library/pnpm"
 case ":$PATH:" in
